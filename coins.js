@@ -19,13 +19,13 @@ let coinPurse = {
 function coinCounter(total){
     total = total * 100;
 
-    coinPurse.quarters = Math.round(total/25);
+    coinPurse.quarters = Math.floor(total/25);
     total = total%25;
 
-    coinPurse.dimes = Math.round(total/10);
+    coinPurse.dimes = Math.floor(total/10);
     total = total%10;
 
-    coinPurse.nickels = Math.round(total/5);
+    coinPurse.nickels = Math.floor(total/5);
     total = total%5;
 
     coinPurse.pennies = total;
@@ -34,6 +34,6 @@ function coinCounter(total){
 }
    
 
-console.log(coinCounter(2.45));
+console.log(coinCounter(2.67));
 
 
